@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "tuvehiculo:build:production",
+            "firebaseProject": "tu-vehiculo-82e7e",
+            "firebaseHostingSite": "tu-vehiculo-82e7e"
+          }
         }
       }
     }

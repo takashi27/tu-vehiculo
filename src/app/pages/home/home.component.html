@@ -1,0 +1,40 @@
+<br><br><br><br><br>
+<div class="container text-center">
+    <br><br>
+    <img src="../../../assets/logo.jpeg" class="w-75" alt="">
+    <h3 style="color:gray">TU VEHÍCULO AL DÍA</h3>
+    <h1 class="text-center">INICIA SESIÓN AQUÍ</h1>
+    <h5 style="color:gray">Bienvenid@ a tu app favorita</h5>
+    <br>
+</div>
+<div class="container">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="color: red;" id="basic-addon3">Usuario</span>
+        </div>
+        <input [(ngModel)]="usuario" type="email" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="color: red;" id="basic-addon3">Contraseña</span>
+        </div>
+        <input [(ngModel)]="pass" type="password" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+    <span *ngIf="alerta" style="color: red;">Usuario o Contraseña Inválidos</span>
+    <button (click)="ingresar()" type="button" class="btn btn-danger btn-block boton btn-lg">Iniciar Sesión</button>
+    <br>
+    <p class="text-center">Tenemos todo lo que necesitas para que tu vehículo funcione correctamente</p>
+    <div class="row text-center justify-content-center">
+        <img src="../../../assets/a.jpeg" class="w-25 rounded rounded-circle" alt="">
+        <img src="../../../assets/b.jpeg" class="w-25 rounded rounded-circle" alt="">
+        <img src="../../../assets/c.jpeg" class="w-25 rounded rounded-circle" alt="">
+    </div>
+    <br><br>
+    <div class="row justify-content-end">
+        <div class="col-6"><a [routerLink]="[ '/Olvidar']">¿Olvidaste la contraseña?</a></div>
+        <div class="col-6" [routerLink]="[ '/Registro']">
+            <p style="color: red;margin: 1rem;">Registrarse</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tu-vehiculo-82e7e": {
+      "hosting": {
+        "tuvehiculo": [
+          "tu-vehiculo-82e7e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tu-vehiculo-82e7e"
+  }
+}
