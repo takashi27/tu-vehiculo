@@ -27,9 +27,9 @@
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp; Fecha de nacimiento</span>
         </div>
-        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <br>
-    <button type="button" [routerLink]="[ '/Hacer']" class="btn btn-danger btn-lg btn-block">REGISTRARSE</button>
+    <button type="button" (click)="post()" class="btn btn-danger btn-lg btn-block">REGISTRARSE</button>
     <br><br><br>
 </div>

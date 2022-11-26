@@ -15,6 +15,16 @@ import { NotificacionesComponent } from './pages/notificaciones/notificaciones.c
 import { FormsModule } from '@angular/forms';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { OlvidarComponent } from './pages/olvidar/olvidar.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
+import { provideMessaging,getMessaging } from '@angular/fire/messaging';
+import { providePerformance,getPerformance } from '@angular/fire/performance';
+import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment.prod';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 
 @NgModule({
   declarations: [
@@ -34,7 +44,11 @@ import { OlvidarComponent } from './pages/olvidar/olvidar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),    
+    provideFirebaseApp(()=> initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth()),
+    provideFirestore(()=>getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

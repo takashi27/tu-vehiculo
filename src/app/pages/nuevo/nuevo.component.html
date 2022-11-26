@@ -1,8 +1,8 @@
 <br><br><br>
 <div class="container text-center">
     <i class="fa fa-user-circle text-center" style="color: red;font-size: 5rem;" aria-hidden="true"></i>
-    <h3 class="text-center">Ejemplo</h3>
-    <h4 class="text-center" style="color: gray;">ejemplo@ejemplo.com</h4>
+    <h3 class="text-center">{{nombre}}</h3>
+    <h4 class="text-center" style="color: gray;">juansps98@hotmail.com</h4>
     <hr>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -20,34 +20,34 @@
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Placa</span>
         </div>
-        <input type="text" class="form-control" placeholder="Ejemplo XXX-123" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" [(ngModel)]="placa" placeholder="Ejemplo XXX-123" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Fecha Mantenimiento</span>
         </div>
-        <input type="text" class="form-control" placeholder="Ejemplo 2022/05/03" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="date" class="form-control" placeholder="Ejemplo 2022/05/03" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Fecha Seguro</span>
         </div>
-        <input type="text" class="form-control" placeholder="Ejemplo 2022/05/03" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="date" class="form-control" placeholder="Ejemplo 2022/05/03" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Fecha Tecnicomecánica</span>
         </div>
-        <input type="text" class="form-control" placeholder="Ejemplo 2022/05/03" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="date" class="form-control" placeholder="Ejemplo 2022/05/03" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Fecha cambio de aceite</span>
         </div>
-        <input type="text" class="form-control" placeholder="Ejemplo 2022/05/03" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="date" class="form-control" placeholder="Ejemplo 2022/05/03" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <br>
-    <button type="button" [routerLink]="[ '/Consultas']" (click)="agregar()" class="btn btn-danger btn-lg btn-block">AGREGAR <i class="fa fa-plus" aria-hidden="true"></i></button>
+    <button type="button" (click)="agregar()" class="btn btn-danger btn-lg btn-block">AGREGAR <i class="fa fa-plus" aria-hidden="true"></i></button>
     <br><br><br>
     <button type="button" name="" id="" class="btn btn-danger btn-lg btn-block"><i class="fa fa-arrow-left" aria-hidden="true"></i> REGRESAR</button>
 </div>

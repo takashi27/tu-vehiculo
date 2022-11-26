@@ -1,1 +1,21 @@
+<div class="container">
+    <div class="card mb-3 animate__animated animate__bounce" *ngIf="mostrar && mostrarB">
+        <div class="row no-gutters justify-content-end">
+            <button type="button" class="btn btn-danger" (click)="mostrar = false">X</button>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-4">
+            <br>
+            <img src="../../../assets/logo.jpeg" class="w-100" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title">Tu SOAT vencerá Pronto</h5>
+              <a type="button" class="btn btn-primary" href="https://www.segurossura.com.co/paginas/movilidad/soat.aspx" target="_blank">Comprar Ahora</a>
+              <p class="card-text"><small class="text-muted">Justo Ahora</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
 <router-outlet></router-outlet>

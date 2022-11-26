@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-olvidar',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OlvidarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  olvidar(){
+    Swal.fire('Correo Ennviado','Se ha enviado un correo a juansps98@hotmail.com con la recuperacion de la contraseña','success');
+    this.router.navigateByUrl('/Home');
   }
 
 }
