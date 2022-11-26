@@ -14,10 +14,10 @@ export class GeneralService {
   }
 
   postNombre(nombre:string){
-    return this.afs.collection('demo').doc('pitkVtnteQBOgm9UT7vW').set({nombre:nombre});
+    return this.afs.collection('demo').doc('pitkVtnteQBOgm9UT7vW').update({nombre:nombre});
   }
 
   postPlaca(placa:string){
-    return this.afs.collection('demo').doc('pitkVtnteQBOgm9UT7vW').set({placa:placa});
+    return this.afs.collection('demo').doc('pitkVtnteQBOgm9UT7vW').update({placa:placa});
   }
 }
